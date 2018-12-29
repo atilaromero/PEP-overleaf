@@ -1,0 +1,16 @@
+\section{Motivation}
+% include some references
+Data carving is a forensic process that attempts to recover files without previous information of where the file starts or ends.
+To accomplish this, a software has to analyze a source of raw data, searching for patterns indicating a know file type and making attempts to locate and reconstruct each of its constituent parts.
+That process commonly disregards the filesystem, being able to recover deleted files from unallocated areas, but faces the problem of fragmentation: in many cases, files are not written sequentially on disk and deleted files may have missing parts.
+
+For example, while doing data carving on a hard drive, a software could sequentially read each drive sector, find a known header of a video file and save the following sectors until a footer is found or a size limit is reached. This is a common data carving approach, but one that fails to recover fragmented videos.
+
+The patterns searched by data carving software are generally manually coded, taking advantage of fixed byte sequences found on headers and footers. But the amount of different file types combined with the slow process of manually coding each of those patterns makes the development of data carving software a tedious task.
+
+The application of machine learning solutions to this manual task has the potential to make it easier and faster. An initial strategy could be to train a classifier to, given a chunk of data, provide a label indicating a file type. That could be used to recover unfragmented deleted files.
+
+The recovery of fragmented files through data carving would require some sort of pattern recognition on the identified chunks, in order to reconstruct the correct sequence.
+
+The proposed work aims to identify some of the potential machine learning approaches that could be used to automate the construction of data carving software.
+
