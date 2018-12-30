@@ -14,8 +14,41 @@ To conduct the search, the following digital libraries were used:
 \end{itemize}
 
 
-, using the search string 
-{\texttt{(``data carving'' AND ``machine learning'')}}. Using ``data-carving'' or ``data carving'' (with or without hyphen) did not change any of the libraries results. Later the search was repeated using the terms {\texttt{(``data carving'' AND ``neural networks'')}}.
+
+The terms chosen to address those questions are shown in table \ref{tab:dataterms}, resulting in the search string presented in  Figure \ref{fig:datasearchstring}.
+
+
+To choose those terms, generic expressions were used, to increase the number of results. But even using this strategy, the returned quantity was low.
+
+
+\begin{table*}[!ht]
+    \centering
+    \begin{tabular}{ l  l  l }
+      Structure 	& Terms 		\\
+      \hline\hline
+      Population 	& data-carving \\   
+                    & data carving \\
+      \hline
+      Intervention 	& machine learning \\
+                    & neural networks \\
+      \hline
+    \end{tabular}
+    \caption{Terms used}
+    \label{tab:dataterms}
+\end{table*}
+
+\begin{figure}[!ht]
+  \centering
+  \fbox{\parbox{\textwidth}{
+    (``data carving'' AND ``machine learning'')
+    (``data-carving'' AND ``machine learning'')
+    (``data carving'' AND ``neural networks'')
+    (``data-carving'' AND ``neural networks'')
+  }}
+  \caption{Search strings}
+  \label{fig:datasearchstring}
+\end{figure}
+
 
 This initial approach brought few results, only four of them considered relevant: \cite{alamri_taxonomy_2014}, 
 \cite{ali_review_2018}, \cite{sportiello_context-based_2012}, and \cite{beebe_sceadan:_2013}. But using citations and references of this four works, the initial results were expanded and gave a more comprehensive view of current research on using machine learning techniques to perform data carving.

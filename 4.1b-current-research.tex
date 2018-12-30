@@ -18,29 +18,29 @@ To conduct the search, the following digital libraries were used:
 \item Springer Link (https://link.springer.com/)
 \end{itemize}
 
-The terms and synonyms chosen to address those questions are shown in table \ref{tab:terms}, grouped by research structure using the boolean operation “OR”, then globally combined using the boolean operation “AND”, resulting in the search string presented in  Figure \ref{fig:searchstring}.
+The terms chosen to address those questions are shown in table \ref{tab:terms}, grouped by research structure using the boolean operation “OR”, then globally combined using the boolean operation “AND”, resulting in the search string presented in  Figure \ref{fig:searchstring}.
 
 To choose these terms, the abbreviations of some common techniques applied in sequence labeling were used, assuming it would be unlikely that a new technique would not mention one of these.
 
 \begin{table*}[!ht]
     \centering
-    \begin{tabular}{ l  l  l }
-      Structure 	& Terms 		& Synonyms \\
+    \begin{tabular}{ l  l  }
+      Structure 	& Terms 		 \\
       \hline\hline
-      Population 	& unstructured data & \\   
-                    & sequential data & \\
+      Population 	& unstructured data \\   
+                    & sequential data \\
       \hline
-      Intervention 	& CNN & \\
-                    & RNN & \\
-                    & HMM & \\
-                    & CRF & \\
-                    & MEMM & \\
-                    & DTW & \\
+      Intervention 	& CNN \\
+                    & RNN \\
+                    & HMM \\
+                    & CRF \\
+                    & MEMM \\
+                    & DTW \\
       \hline
-      Outcome 		& sequence labeling &\\
+      Outcome 		& sequence labeling \\
       \hline
     \end{tabular}
-    \caption{Terms and synonyms}
+    \caption{Terms used}
     \label{tab:terms}
 \end{table*}
 
@@ -68,9 +68,12 @@ The 197 returned papers were retrieved through the submission of the search stri
 
 Results with unavailable content were ignored.
 
-With the exclusion of 6 duplicated studies, the title and the abstract of 191 were read and 68 that fulfilled the inclusion criteria and were not rejected due to exclusion criteria were accepted in the intermediary selection.
+With the exclusion of 6 duplicated studies, the title and the abstract of 191 were read and 68 
+were accepted in the intermediary selection,
+which required enough detail to implement the solution,
+some form of technique improvement, and possibility of application on the data carving field.
 
-During the fourth step, 47 of the papers were excluded after quality assessment, resulting in 21 selected studies.
+Next, 47 of the papers were excluded after quality assessment, focused on eliminate redundant studies, resulting in 21 selected studies.
 
 Table 
 \ref{tab:results}
@@ -96,6 +99,8 @@ shows the total remaining studies from each database.
     \end{tabular}
     \caption{Search engines and selected studies at each phase.}\label{tab:results}
 \end{table}
+
+The conclusions drawn from those studies are presented next, answering the formulated questions:
 
 \begin{enumerate}
 \item   \textbf{What are the sequence labeling algorithms used to treat unstructured data?}
