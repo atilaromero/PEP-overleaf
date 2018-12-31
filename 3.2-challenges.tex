@@ -1,4 +1,28 @@
 \section{Challenges}
+
+\cite{ali_review_2018} makes a distinction between categories of carving techniques and of file's type identification, the later based on \cite{amirani_new_2008}. While those two concepts have similarities, the task of identifying a file type is commonly used on non-deleted files, does not deal with the problem of file reconstruction and has stronger assumptions about the integrity of the file.
+
+\cite{ali_review_2018} classifies three types of carving techniques:
+\begin{description}
+    \item [signature-based carving] Searches for patterns in the dataset, commonly trying to identify headers and footers.
+    \item [structure-based carving] Uses knowledge of a file structure to search for coherent patterns that match that structure.
+    \item [content-based carving] Classifies each chunk of the dataset individually and then tries to infer relationships and order between chunks based on content to reassemble the original file.
+\end{description}
+
+For file type detection, \cite{amirani_new_2008} cites three categories:
+\begin{description}
+    \item [extension-based identification] The content of the file is ignored, only its filename extension is used.
+    \item [magic bytes-based identification] Magic bytes are signatures, generally a fixed string, usually in the beginning of a file. Is a common strategy that uses header/footer, but not all files adopt it.
+    \item [contend-based identification] Identifies the file using some statistical modeling of its content. 
+\end{description}
+
+\cite{beebe_sceadan:_2013} identifies three content-based approaches to classify file and data types:
+\begin{itemize}
+    \item semantic parsing
+    \item nonsemantic parsing
+    \item machine learning
+\end{itemize}
+
 %  fragmentacao
 %  reconhecimento de estruturas
 % exemplo de arquivo 

@@ -1,4 +1,6 @@
 \section{Current research}
+The employed background research methodology was inspired by PICO (Population, Intervention, Comparison, Outcome) criteria \cite{Kitchenham07guidelinesfor}.
+
 To assess the current research status on data carving machine learning technologies, the following research question was defined:
 
 \begin{itemize}
@@ -13,12 +15,9 @@ To conduct the search, the following digital libraries were used:
 \item Springer Link (https://link.springer.com/)
 \end{itemize}
 
+The terms chosen to address those questions are shown in table \ref{tab:dataterms}, resulting in the search strings presented in  Figure \ref{fig:datasearchstring}.
 
-
-The terms chosen to address those questions are shown in table \ref{tab:dataterms}, resulting in the search string presented in  Figure \ref{fig:datasearchstring}.
-
-
-To choose those terms, generic expressions were used, to increase the number of results. But even using this strategy, the returned quantity was low.
+To choose those terms, generic expressions were used, to increase the number of results. But even using this strategy, the number of papers found was low.
 
 
 \begin{table*}[!ht]
@@ -39,10 +38,10 @@ To choose those terms, generic expressions were used, to increase the number of 
 
 \begin{figure}[!ht]
   \centering
-  \fbox{\parbox{\textwidth}{
-    (``data carving'' AND ``machine learning'')
-    (``data-carving'' AND ``machine learning'')
-    (``data carving'' AND ``neural networks'')
+  \fbox{\parbox{\textwidth}{\centering
+    (``data carving'' AND ``machine learning'')\\
+    (``data-carving'' AND ``machine learning'')\\
+    (``data carving'' AND ``neural networks'')\\
     (``data-carving'' AND ``neural networks'')
   }}
   \caption{Search strings}
@@ -50,7 +49,7 @@ To choose those terms, generic expressions were used, to increase the number of 
 \end{figure}
 
 
-This initial approach brought few results, only four of them considered relevant: \cite{alamri_taxonomy_2014}, 
+This initial approach brought few results, only four of which were considered relevant: \cite{alamri_taxonomy_2014}, 
 \cite{ali_review_2018}, \cite{sportiello_context-based_2012}, and \cite{beebe_sceadan:_2013}. But using citations and references of this four works, the initial results were expanded and gave a more comprehensive view of current research on using machine learning techniques to perform data carving.
 
 The first work found mentioning the usage of a neural network in data carving was \cite{amirani_new_2008}, in 2008. It uses Principal Component Analysis (PCA) as input for a 5 layer feed-forward auto-associative unsupervised neural network to do feature extraction and a 3 layer Multi Layer Perceptron (MLP) to perform classification.
