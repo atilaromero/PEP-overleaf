@@ -1,27 +1,42 @@
-\section{Challenges}
+\section{Data carving evolution}
 
-\cite{ali_review_2018} makes a distinction between categories of carving techniques and of file's type identification, the later based on \cite{amirani_new_2008}. While those two concepts have similarities, the task of identifying a file type is commonly used on non-deleted files, does not deal with the problem of file reconstruction and has stronger assumptions about the integrity of the file.
-
-\cite{ali_review_2018} classifies three types of carving techniques:
+% \cite{ali_review_2018} makes a distinction between categories of carving techniques and of file's type identification, the later based on \cite{amirani_new_2008}.
+\cite{ali_review_2018} divides the data carving process in three steps:
 \begin{description}
-    \item [signature-based carving] Searches for patterns in the dataset, commonly trying to identify headers and footers.
-    \item [structure-based carving] Uses knowledge of a file structure to search for coherent patterns that match that structure.
-    \item [content-based carving] Classifies each chunk of the dataset individually and then tries to infer relationships and order between chunks based on content to reassemble the original file.
+    \item [identification] classifies the file type of individual chunks of data. 
+    \item[validation] includes a list of requirements of a file that are needed for its recovery to be considered successful.
+    \item [reassembling] attempts to reconstruct the original file.
 \end{description}
 
-For file type detection, \cite{amirani_new_2008} cites three categories:
+Some of the studies found deal only with the identification step, which has applications of its own, while other include the challenge of achieving reassembling.
+
+% While those two concepts have similarities, the task of identifying a file type is commonly used on non-deleted files, does not deal with the problem of file reconstruction and has stronger assumptions about the integrity of the file.
+
+\cite{nadeem_ashraf_forensic_2013} groups the carving techniques in generations, each extending the previous one:
+\begin{description}
+    \item [first generation] Header-footer based carving. Uses file signatures like magic-bytes, headers and footers to identify beginning and end of a file.
+    \item [second generation] Structure based carving, also called ``semantic carving'' or ``deep carving''. Reduces number of false positives by using file structure knowledge to perform validation.
+    \item [third generation] Advance reassembling with methods to deal with fragmentation. Tries to infer relationships and order between chunks of data based on content and statistical analysis to reassemble the original file.
+\end{description}
+
+For file type detection, which could be mapped to the identification step in the \cite{ali_review_2018} process steps, \cite{amirani_new_2008} cites three categories:
 \begin{description}
     \item [extension-based identification] The content of the file is ignored, only its filename extension is used.
     \item [magic bytes-based identification] Magic bytes are signatures, generally a fixed string, usually in the beginning of a file. Is a common strategy that uses header/footer, but not all files adopt it.
     \item [contend-based identification] Identifies the file using some statistical modeling of its content. 
 \end{description}
 
-\cite{beebe_sceadan:_2013} identifies three content-based approaches to classify file and data types:
-\begin{itemize}
-    \item semantic parsing
-    \item nonsemantic parsing
-    \item machine learning
-\end{itemize}
+\cite{beebe_sceadan:_2013} identifies three content-based approaches to classify file and data types, also referring only to the identification step of the \cite{ali_review_2018} data carving process division:
+\begin{description}
+    \item [semantic parsing] Relies on the file structure to identify its type.
+    \item[nonsemantic parsing] Searches for strings that are common to specific files.
+    \item [machine learning] 
+    The machine learning ap-
+proach, including both supervised and unsupervised algorithms,
+is beneficial for many file and data type classification problems,
+because they can often be classified statistically
+\end{description}
+
 
 %  fragmentacao
 %  reconhecimento de estruturas
