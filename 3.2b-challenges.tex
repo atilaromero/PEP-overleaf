@@ -4,12 +4,8 @@ Each of the steps cited by \cite{ali_review_2018} for the data carving process d
 
 In the current proposal, a new type of challenge is introduced. Instead of using previous knowledge of the file structure to improve carving results, would be possible to do the inverse and use insights from the carving process to reveal structures in the file?
 
+One of the most simple structures a file can have is a fixed size field, such as 32 bit a unsigned integer representing a datetime value. For that type of field, the insight may come in the form of a expected range. Still using the datetime example, a possible outcome would be the observation that certain kind of file always presents that field value inside some range, that coincides with a range often observed in datetime fields. That does not proves the unknown field to be a datetime, but gives suggestion in that direction.
 
+Few structures are so simple as a group of fixed sized fields. It is very common, for example, to use a field to specify the length of the next field. Another type of complexity increase occurs when the value of a field establishes which specification should be used in the remaining of the file.
 
-% exemplo de arquivo 
-%  header
-%  estruturas internas
-%  interpretação de estruturas
-%  estruturas polimorficas
-%  estruturas que indicam seu tamanho
-%  fragmentacao: encontrando continuacao de arquivo
+The direct utility of the discovery of file type structures is the extraction of values from its fields. This information has value for itself, but could also be used to improve validation and even reassembling. 
