@@ -1,16 +1,14 @@
-\section{Data carving evolution}
+\section{Data carving taxonomies}
 
 % \cite{ali_review_2018} makes a distinction between categories of carving techniques and of file's type identification, the later based on \cite{amirani_new_2008}.
 \cite{ali_review_2018} divides the data carving process in three steps:
 \begin{description}
-    \item [identification] classifies the file type of individual chunks of data. 
-    \item[validation] includes a list of requirements of a file that are needed for its recovery to be considered successful.
-    \item [reassembling] attempts to reconstruct the original file.
+    \item [identification] Classifies the file type of individual chunks of data. 
+    \item[validation] Includes a list of requirements of a file that are needed for its recovery to be considered successful.
+    \item [reassembling] Attempts to reconstruct the original file.
 \end{description}
 
-Some of the studies found deal only with the identification step, which has applications of its own, while other include the challenge of achieving reassembling.
-
-% While those two concepts have similarities, the task of identifying a file type is commonly used on non-deleted files, does not deal with the problem of file reconstruction and has stronger assumptions about the integrity of the file.
+Some of the studies found deal only with the identification step, which has applications of its own, while others also include the challenge of achieving reassembling.
 
 \cite{nadeem_ashraf_forensic_2013} groups the carving techniques in generations, each extending the previous one:
 \begin{description}
@@ -29,21 +27,7 @@ For file type detection, which could be mapped to the identification step in the
 \cite{beebe_sceadan:_2013} identifies three content-based approaches to classify file and data types, also referring only to the identification step of the \cite{ali_review_2018} data carving process division:
 \begin{description}
     \item [semantic parsing] Relies on the file structure to identify its type.
-    \item[nonsemantic parsing] Searches for strings that are common to specific files.
-    \item [machine learning] 
-    The machine learning ap-
-proach, including both supervised and unsupervised algorithms,
-is beneficial for many file and data type classification problems,
-because they can often be classified statistically
+    \item[nonsemantic parsing] Searches for strings that are commonly found in specific files.
+    \item [machine learning] Uses supervised and unsupervised algorithms, like Support Vector Machine (SVM), k-Nearest Neighbor (kNN), and Neural Networks (NN).
 \end{description}
 
-
-%  fragmentacao
-%  reconhecimento de estruturas
-% exemplo de arquivo 
-%  header
-%  estruturas internas
-%  interpretação de estruturas
-%  estruturas polimorficas
-%  estruturas que indicam seu tamanho
-%  fragmentacao: encontrando continuacao de arquivo
