@@ -1,35 +1,8 @@
 \section{Existing tools}
+The available data carving tools generally do not take advantage of the latest techniques that research on the field offers, often still relying in header/footer identification and providing limited reassembling capabilities.
 
-The available data carving tools generally do not take advantage of the latest techniques that research on the field offers, often still relying in header/footer identification and seldom dealing with reassembling.
+% check photorec citation
 
-\cite{ali_review_2018}
-Foremost [8], Scalpel [9],
-RevIt [10], PyFlag [11], Multimedia File Carver
-[12], myKarve [13], APF [14], and [15] and
-JPGcarve [16]
+Available data carving tools are cited by \cite{ali_review_2018}, \cite{qiu_new_2014}, \cite{nadeem_ashraf_forensic_2013}, and \cite{roux_reconstructing_2008}, but the review of \cite{ali_review_2018} is the most comprehensive. Among the listed tools, only Foremost \cite{kendall_notitle_2010}, Scalpel \cite{richard_iii_scalpel:_2005}, and PhotoRec \cite{grenier_photorec_2011} support a wide range of file formats. These three tools rely on header/footer identification.
 
-\cite{qiu_new_2014}
-Foremost is the first open-source file-carving tool, which
-was developed by Kris Kendall and Jesse Kornblum in USA
-Air Force Office [5].
-
-Golden et al developed Scalpel based on foremost
-[7].
-
-PhotoRec can recover various file
-formats and is widely used to recover files with file system
-damaged [8].
-
-Joachim et al. introduced Smart Carving, which
-has no limitation of file system and the number of file
-fragments [11].
-
-
-
-%  abordagens comuns
-%   magic numbers
-%   skip areas of known files
-%   use content to infer file size
-%   use fixed value as file size
-%   watch content to infer when file ended
-%   test opening the file
+The amount of work required to support the vast amount of file types in existence is here chosen as an hypothesis for the reason for this discrepancy. Most of the attention paid to the results of data carving research is focused on increasing some statistical measurement of success. While these advances are undoubtedly important, they may not be the kind of research needed to transform these findings into practical tools. If this is the case, then the forensic community would benefit from researches that could make the task of supporting the carving of a new file type easier. Machine learning techniques have potential to achieve that goal, because it can replace the step of manually encoding a structure parser by automatically recognizing patterns in large amounts of data.
