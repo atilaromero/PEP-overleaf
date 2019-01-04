@@ -3,20 +3,18 @@ The employed background research methodology was inspired by PICO (Population, I
 
 To search relevant studies about sequence labeling that could be applied in the data carving field, the following research questions were defined:
 
-\begin{enumerate}
+\begin{enumerate}[itemindent=\parindent,label=\textbf{RQ\arabic*.}]
 \item   What are the sequence labeling algorithms used to treat unstructured data?
 \item   In which application areas they are used?
 \item   How these algorithms compare to each other?
 \item   Which of them could produce better results in data carving?
 \end{enumerate}
 
-To conduct the search, the following digital libraries were used: 
-\begin{itemize}
-\item{ACM} (https://dl.acm.org/)
-\item IEEE (https://ieeexplore.ieee.org/)
-\item Scopus (https://www.scopus.com/) 
-\item Springer Link (https://link.springer.com/)
-\end{itemize}
+To conduct the search, the following digital libraries were used: ACM (https://dl.acm.org/), 
+IEEE (https://ieeexplore.ieee.org/),
+Scopus (https://www.scopus.com/),
+and
+Springer Link (https://link.springer.com/).
 
 The terms chosen to address those questions are shown in table \ref{tab:terms}, grouped by research structure using the boolean operation “OR”, then globally combined using the boolean operation “AND”, resulting in the search string presented in  Figure \ref{fig:searchstring}.
 
@@ -98,7 +96,7 @@ shows the total remaining studies from each database.
 
 The conclusions drawn from those studies are presented next, answering the formulated questions:
 
-\begin{enumerate}
+\begin{enumerate}[itemindent=\parindent,label=\textbf{RQ\arabic*.}]
 \item   \textbf{What are the sequence labeling algorithms used to treat unstructured data?}
 
 Two groups of algorithms were identified as the most cited in sequence labeling: conditional random fields (CRF) and bidirectional long short-term memory (BLSTM). 
@@ -106,149 +104,122 @@ Other algorithms found were hidden Markov models (HMM), to which CRF is related,
 Some algorithms are variations of others and some are hybrids, such as the combination of CRF and neural networks, and some were used only as baselines.
 
 From the selected studies,
-3 of them offers a broad overview of sequence labeling or machine learning: 
-\begin{itemize}
-        \item 
-    Graves \cite{gravessupervised} provides an excellent overview of sequence labeling, 
-        \item 
-    Deng and Li \cite{6423821} offers an overview of machine learning in general, which can be used to situate sequence labeling among other problems and to compare different techniques that have different goals and assumptions, 
-        \item 
+3 of them offers a broad overview of sequence labeling or machine learning: Graves \cite{gravessupervised}, Deng and Li \cite{6423821}, and Schmidhuber \cite{Schmidhuber201585}.
+    Graves \cite{gravessupervised} provides an excellent overview of sequence labeling.
+    Deng and Li \cite{6423821} offers an overview of machine learning in general, which can be used to situate sequence labeling among other problems and to compare different techniques that have different goals and assumptions. 
     Schmidhuber \cite{Schmidhuber201585} gives a detailed historical overview of machine learning.
-\end{itemize}
 
-The only selected study that do not apply CRF or neural networks was:
-    \begin{itemize}
-        \item 
-    Daf{\'e} et al. \cite{dafe2015learning}, describing the approximately-contiguous sequential classifier (AC-SC) and pattern silhouettes, comparing it to HMM and other algorithms.
-\end{itemize}
+The only selected study that do not apply CRF or neural networks was Daf{\'e} et al. \cite{dafe2015learning}, describing the approximately-contiguous sequential classifier (AC-SC) and pattern silhouettes, comparing it to HMM and other algorithms.
 
-        
+    
 Conditional random fields (CRF) without neural networks are discussed in 
 6 selected studies:
-\begin{itemize}
-        \item 
+    % Cuong et al. \cite{Cuong:2014:CRF:2627435.2638567},
+    % Chatzis and Demiris \cite{Chatzis20131523},
+    % Wang and Zhang \cite{6213103}, Song et al. \cite{6247918},
+    % Papadopoulos and Tzanetakis \cite{7579173},
+    % and
+    % Jeong and Lee \cite{4599397}.
     Cuong et al. \cite{Cuong:2014:CRF:2627435.2638567} discusses high-order dependencies in CRF,
-        \item 
-    Chatzis and Demiris \cite{Chatzis20131523} discusses infinite order CRF, 
-        \item 
-    Wang and Zhang \cite{6213103} describes Hidden Conditional Random Fields (HCRF), 
-        \item 
+    Chatzis and Demiris \cite{Chatzis20131523} discusses infinite order CRF,
+    Wang and Zhang \cite{6213103} describes Hidden Conditional Random Fields (HCRF),
     Song et al. \cite{6247918} describes Multi-View Latent variable Discriminative Conditional Random Fields (MV-LDCRF),
-        \item 
     Papadopoulos and Tzanetakis \cite{7579173} compares HMM and CRF,
-        \item 
+    and
     Jeong and Lee \cite{4599397} explains triangular-chain CRF.
-\end{itemize}
 
 Neural Networks were used in 
 11 of the selected studies.
 From these, 
 only 
 4 do not use Long Short-Term Memory (LSTM): 
-\begin{itemize}
-        \item 
     Irsoy and Cardie \cite{Irsoy2014720} compares CRF to RNN,
-        \item 
     Zhang et al. \cite{Zhang:2017:NNS:3105654.3105669} describes compact feedforward sequential memory network (cFSMN), 
-        \item 
-    Zhao et al. \cite{7953168} describes recurrent convolutional neural network (RCNN) and compares it with LSTM. 
-        \item 
-    Cui et al. \cite{Cui20162474} describes the hierarchical temporal memory (HTM) sequence memory model, a neural network model that can do continuous online learning, and compares it with LSTM and other techniques,
-\end{itemize}
+    Zhao et al. \cite{7953168} describes recurrent convolutional neural network (RCNN) and compares it with LSTM,
+    Cui et al. \cite{Cui20162474} describes the hierarchical temporal memory (HTM) sequence memory model, a neural network model that can do continuous online learning, and compares it with LSTM and other techniques.
 
 The remaining 
 7 studies use LSTM, where 
-\begin{itemize}
-        \item 
     Nguyen et al. \cite{nguyen2018recurrent} compares CRF to some combined models of CRF and BLSTM,
-        \item 
     Xie et al. \cite{7900261} describes fully convolutional recurrent network (FCRN) combining a convolutional network with a multi-layer BLSTM,
-        \item 
     Fang et al. \cite{Fang:2017:DEU:3131672.3131693} describes hierarchical bidirectional deep recurrent neural network (HB-RNN), which uses a tree of BLSTM networks,
-        \item 
     Veli\v{c}kovi\'{c} et al. \cite{Velickovic:2018:CRM:3240925.3240937} describes cross-modal LSTM (X-LSTM), which is a network of LSTMs,
-        \item 
     Tjandra et al. \cite{Tjandra2016448} combines LSTM with Gated Recurrent Unit (GRU) using tensor products,
-        \item 
     Liu et al. \cite{Liu20173671} proposes the global context aware attention LSTM (GCA-LSTM), that adds a global context memory block to LSTM, 
-        \item 
     Feng et al. \cite{feng2018attention} adds a context attention layers to a hierarchical LSTM to produce a Context Attention LSTM (CA-LSTM).
-\end{itemize}
 
 \item   \textbf{In which application areas they are used?}
 
-On the selected studies, these are some frequently seen areas in which sequence label was applied:
+% On the selected studies, some areas were frequently seen these are some frequently seen areas in which sequence label was applied:
+    Part Of Speech (POS) tagging 
+    associates part of speech labels to words in a sentence and was studied in 
+    \cite{Chatzis20131523} and
+    \cite{Tjandra2016448}.
+    
+    Speech recognition
+    converts spoken words into text
+    and was studied in 
+    \cite{Zhang:2017:NNS:3105654.3105669}, \cite{7953168}, 
+    \cite{gravessupervised}, and
+    \cite{6423821}.
+    
+    Handwriting recognition
+    digitally transcribes a handwritten text
+    and was studied in 
+    \cite{Cuong:2014:CRF:2627435.2638567}, 
+    \cite{Chatzis20131523}, and
+    \cite{7900261}.
 
-\begin{itemize}
-    \item Part Of Speech (POS) tagging
-    \cite{Chatzis20131523}
-    \cite{Tjandra2016448}
-    \unskip:
-    associates part of speech labels to words in a sentence.
+    Protein sequence analysis
+    compare regions of DNA or RNA with known protein sequences
+    and was studied in 
+    \cite{dafe2015learning}.
     
-    \item Speech recognition
-    \cite{Zhang:2017:NNS:3105654.3105669}
-    \cite{7953168}
-    \cite{gravessupervised}
-    \cite{6423821}
-    \unskip:
-    converts spoken words into text.
-    
-    \item Handwriting recognition
-    \cite{Cuong:2014:CRF:2627435.2638567}
-    \cite{Chatzis20131523}
-    \cite{7900261}
-    \unskip:
-    digitally transcribes a handwritten text.
-    
-    \item Protein sequence analysis
-    \cite{dafe2015learning}
-    \unskip:
-    compare regions of DNA or RNA with known protein sequences.
-    
-    \item Action recognition
-    \cite{6247918}
+    Action recognition
+    gives labels to predefined sequences of human motion, commonly translating body postures and hand shapes to commands or words
+    and was studied in 
+    \cite{6247918},
     % \item video segmentation
-    \cite{Chatzis20131523}
+    \cite{Chatzis20131523},
     % \item video event classification
-    \cite{6213103}
+    \cite{6213103},
     % \item Gesture recognition:
-    \cite{Liu20173671}
+    \cite{Liu20173671}, and
     % \item sign language
-    \cite{Fang:2017:DEU:3131672.3131693}
-    \unskip:
-    gives labels to predefined sequences of human motion, commonly translating body postures and hand shapes to commands or words.  
+    \cite{Fang:2017:DEU:3131672.3131693}.  
     
-    \item Information extraction
+    Information extraction
+    retrieves structured information from unstructured data, often text,
+    and was studied in 
     % \item bibliography extraction
-    \cite{Cuong:2014:CRF:2627435.2638567}
+    \cite{Cuong:2014:CRF:2627435.2638567},
     % \item opinion mining
-    \cite{Irsoy2014720}
+    \cite{Irsoy2014720},
     % \item legal texts
-    \cite{nguyen2018recurrent}
+    \cite{nguyen2018recurrent},
     % sentiment classification
-    \cite{feng2018attention}
-    \cite{dafe2015learning}
-    \unskip:
-    retrieves structured information from unstructured data, often text.
+    \cite{feng2018attention}, and
+    \cite{dafe2015learning}.
     
-\end{itemize}
 
 \item   \textbf{How these algorithms compare to each other?}
 
-\begin{itemize}
-    \item HMM and CRF: 
+% \begin{itemize}
+    % \item HMM and CRF: 
     
-    As explained by Papadopoulos and Tzanetakis \cite{7579173}, HMM and CRF are both cases of Markov networks, but differ in these aspects:
-    \begin{itemize}
-        \item HMM represents $p(y,x)$ while CRF represents $p(y|x)$ (where $x$ is an observation and $y$ the label), which is why HMM is considered a generative model and CRF a discriminative one.
+    As explained by Papadopoulos and Tzanetakis \cite{7579173}, HMM and CRF are both cases of Markov networks, but differ in some aspects.
+    % \begin{itemize}
+        % \item 
+        HMM represents $p(y,x)$ while CRF represents $p(y|x)$ (where $x$ is an observation and $y$ the label), which is why HMM is considered a generative model and CRF a discriminative one.
         Graves \cite{gravessupervised} clarifies that $p(x)$, which can be obtained by $p(x) = \sum_{y} p(x,y)$, can be used to generate artificial data, hence the name.
-        \item HMM assumes strong independence between observation variables while CRF relaxes that assumption.
-        \item CRF generally gives better results than HMM in many real-world problems where the dependence between observation variables is common, like natural language processing, music audio signal processing, speech recognition, and bioinformatics.
+        % \item 
+        HMM assumes strong independence between observation variables while CRF relaxes that assumption.
+        % \item 
+        CRF generally gives better results than HMM in many real-world problems where the dependence between observation variables is common, like natural language processing, music audio signal processing, speech recognition, and bioinformatics.
         
-    \end{itemize}
+    % \end{itemize}
     
-    \item High-order CRF:
+    % \item High-order CRF:
     
     As Cuong et al. \cite{Cuong:2014:CRF:2627435.2638567} details, the common linear-chain CRF considers dependencies between at most two adjacent labels, because its computational cost is exponential in respect to the number of considered neighbors.
     
@@ -261,13 +232,13 @@ On the selected studies, these are some frequently seen areas in which sequence 
     % Jeong and Lee \cite{4599397} explain triangular-chain CRF.
     
     
-    \item CRF and neural networks:
+    % \item CRF and neural networks:
     
     Irsoy and Cardie \cite{Irsoy2014720} compared CRF and RNN, obtaining better F1-scores with RNN.
     
     Nguyen et al. \cite{nguyen2018recurrent} compared CRF to some combined models of CRF and BLSTM, obtaining better F1-scores with the BLSTM-CRF models.
 
-    \item Recurrent neural networks (RNN) and LSTM:
+    % \item Recurrent neural networks (RNN) and LSTM:
     
     As Graves \cite{gravessupervised} explains, is very difficult for a standard RNN to retain information for longs periods of time because, with time, new data from the input layer tends to prevail over signals from the hidden layer, while LSTM has special `memory cells', which can retain information as long as necessary.
     
@@ -280,7 +251,7 @@ On the selected studies, these are some frequently seen areas in which sequence 
     reports that RNNs are hard to train because they cannot take full advantage of GPUs, while convolutional neural networks (CNN) does not improve speech recognition results compared to other techniques.
     Comparing the proposed model RCNN with LSTM, RCNN was faster to train and showed a slightly better result.
 
-\end{itemize}
+% \end{itemize}
 
 
 

@@ -6,17 +6,31 @@ But, in order to find a field of study that describes the data carving problem i
 The interpretation of the inner structure of a file is usually done by parsers, which uses a representation of that structure to extract or transform the file's content. But bibliography on parsers generally refers to language parsers, dealing with questions not entirely applicable to data carving, which is why the searches using the term ``parser'' were also unsuccessful.
 
 A Wikipedia search was conducted to find a better term to the problem. Several pages related to machine learning were read, in an empirical search for links that could lead to a potential better term. The most useful result was found at https://en.wikipedia.org/wiki/Pattern\_recognition \cite{wikipedia_editors_pattern_2018}, giving the following glossary of pattern recognition algorithms:
+    classification algorithms,
+    clustering algorithms,
+    ensemble learning algorithms,
+    general algorithms for predicting arbitrarily-structured
+    sets of labels,
+    multilinear subspace learning algorithms,
+    real-valued sequence labeling algorithms,
+    regression algorithms, and
+    sequence labeling algorithms.
 
-\begin{itemize}
-    \item	Classification algorithms (supervised algorithms predicting categorical labels)
-    \item	Clustering algorithms (unsupervised algorithms predicting categorical labels)
-    \item	Ensemble learning algorithms (supervised meta-algorithms for combining multiple learning algorithms together)
-    \item	General algorithms for predicting arbitrarily-structured (sets of) labels
-    \item    Multilinear subspace learning algorithms (predicting labels of multidimensional data using tensor representations)
-    \item	Real-valued sequence labeling algorithms (predicting sequences of real-valued labels)
-    \item	Regression algorithms (predicting real-valued labels)
-    \item   Sequence labeling algorithms (predicting sequences of categorical labels)
-\end{itemize}
+% \begin{itemize}
+    Classification algorithms
+    are supervised algorithms predicting categorical labels. Clustering algorithms
+    are unsupervised algorithms predicting categorical labels.
+    Ensemble learning algorithms
+    are supervised meta-algorithms for combining multiple learning algorithms together.
+    Multilinear subspace learning algorithms
+    predict labels of multidimensional data using tensor representations.
+    Real-valued sequence labeling algorithms
+    predict sequences of real-valued labels.
+    Regression algorithms
+    predict real-valued labels.
+    Sequence labeling algorithms 
+    predict sequences of categorical labels.
+% \end{itemize}
 
 It is important to notice that different classes of algorithms would be more suitable for different learning objectives.
 A clustering algorithm could be used to gather information on a source data with unknown structure.
